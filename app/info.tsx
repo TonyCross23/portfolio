@@ -44,32 +44,48 @@ const Info = () => {
         <span className="underline">React (Next.js)</span>.
       </motion.h6>
 
-      <div className='flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium'>
+      <motion.div className='flex flex-col sm:flex-row items-center 
+                  justify-center gap-2 px-4 text-lg font-medium'
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    delay:0.2
+                  }}
+      >
         <Link href="#contact"
-              className='bg-gray-900 text-white
-                         px-7 py-3 flex items-center gap-2 rounded-full'
+              className='group bg-gray-900 text-white
+                         px-7 py-3 flex items-center gap-2 rounded-full
+                         outline-none focus:scale-110 hover:scale-110
+                         hover:bg-gray-950 active:scale-105 translate'
               >
                 Contact me here 
-                <BsArrowRight/>
+                <BsArrowRight className='group opacity-70 group-hover:translate-x-1 translate'/>
         </Link>
-        <a href='#'
-           className='bg-white
-                         px-7 py-3 flex items-center gap-2 rounded-full'
+        <a href='/CV.pdf' download
+           className='group bg-white
+           px-7 py-3 flex items-center gap-2 rounded-full            
+           outline-none focus:scale-110 hover:scale-110
+           active:scale-105 translate border border-black/10'
         >
           Download CV 
-          <HiDownload />
+          <HiDownload className="opacity-70 group-hover:translate-y-1 transition"/>
         </a>
-        <a href='#'
-           className='bg-white text-gray-800
-           p-4 flex items-center gap-2 text-[1.35rem] rounded-full'>
+        <a href='https://github.com/TonyCross23' target='_blank'
+           className='bg-white text-gray-800 opacity-90
+           p-4 flex items-center gap-2 text-[1.35rem] rounded-full
+           outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950
+           active:scale-105 translate border border-black/10'>
             <MdFacebook />
         </a>
-        <a href='#'
-           className='bg-white text-gray-800
-           p-4 flex items-center gap-2 text-[1.35rem] rounded-full'>
+        <a href='https://github.com/TonyCross23' target='_blank'
+           className='bg-white text-gray-800 opacity-90
+           p-4 flex items-center gap-2 text-[1.35rem] rounded-full
+           outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950
+           active:scale-105 translate border border-black/10'
+        >
             <FaGithubSquare />
         </a>
-      </div>
+      </motion.div>
     </section>
   )
 }
