@@ -1,7 +1,7 @@
 import About from "./components/about";
 import Projects from "./components/projects";
 import SectionDivider from "./components/section-divider";
-import Info from "./info";
+import Info from "./components/info";
 
 export default function Home() {
   return (
